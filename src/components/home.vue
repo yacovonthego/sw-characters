@@ -1,11 +1,17 @@
 <template>
-
+  <div>
+    <upper></upper>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "home"
-    }
+  import upper from './upper'
+  export default {
+      name: "home",
+      components: {
+          upper
+      }
+  }
 </script>
 
 <style scoped>
