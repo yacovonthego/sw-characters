@@ -1,7 +1,12 @@
 <template>
   <div>
     <div class="container">
-      <header class="header"></header>
+      <header class="header">
+        <img src="../assets/header__bg.png" alt="bg-image is not loaded" class="header__bg-image">
+        <div class="header__center">
+          <img src="../assets/text-image.png" alt="text image is not loaded" class="header__text">
+        </div>
+      </header>
     </div>
   </div>
 </template>
@@ -14,6 +19,19 @@
 </script>
 
 <style scoped lang="sass">
-
-
+  .header
+    width: 100%
+    position: relative
+    &__bg-image
+      width: 100%
+      height: auto
+    &__center
+      width: 28.2%
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    &__text
+      width: 100%
+      height: auto
 </style>
