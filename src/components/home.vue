@@ -14,6 +14,10 @@
   }
 </script>
 
-<style scoped>
-
+<style lang="sass">
+  @import "../norlmalize/norlmalize"
+  .container
+    width: 1440px
+    margin-right: auto
+    margin-left: auto
 </style>

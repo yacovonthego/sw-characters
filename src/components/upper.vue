@@ -1,6 +1,8 @@
 <template>
   <div>
-    <header class="header"></header>
+    <div class="container">
+      <header class="header"></header>
+    </div>
   </div>
 </template>
 
@@ -11,6 +13,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="sass">
+
 
 </style>
