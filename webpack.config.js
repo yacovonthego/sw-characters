@@ -1,5 +1,6 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
+const px2rem = require('postcss-px2rem')
 
 module.exports = {
   entry: './src/main.js',
@@ -14,7 +15,8 @@ module.exports = {
         test: /\.css$/,
         use: [
           'vue-style-loader',
-          'css-loader'
+          'css-loader',
+          'postcss-px2rem'
         ],
       },
       {
