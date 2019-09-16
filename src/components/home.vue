@@ -1,15 +1,19 @@
 <template>
   <div>
     <upper></upper>
+    <search></search>
   </div>
 </template>
 
 <script>
   import upper from './upper'
+  import search from "./search"
+
   export default {
       name: "home",
       components: {
-          upper
+          upper,
+          search
       }
   }
 </script>
