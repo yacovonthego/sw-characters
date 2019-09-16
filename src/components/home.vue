@@ -20,6 +20,7 @@
 
 <style lang="sass">
   @import "../assets/sass/norlmalize"
+  @import "../assets/sass/fonts"
 
   body
     background-color: #333333

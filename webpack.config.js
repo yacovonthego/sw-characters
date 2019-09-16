@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const px2rem = require('postcss-px2rem')
 
 module.exports = {
   entry: './src/main.js',
@@ -67,6 +66,14 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'
+        }
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/'
         }
       }
     ]
