@@ -34,4 +34,22 @@
     &__text
       width: 100%
       height: auto
+  /*@media (max-width: 576px)*/
+  @media (max-width: 768px)
+    .header
+      height: 240px
+      display: flex
+      justify-content: center
+      &__center
+        width: 212px
+        height: 125px
+  /*@media (max-width: 992px)*/
+  /*@media (max-width: 1200px)*/
+  /*@media (min-width: 1200px)*/
+
+  /*@media (max-width: 576px)*/
+  /*@media (min-width: 576px)*/
+  /*@media (min-width: 768px)*/
+  /*@media (min-width: 992px)*/
+  /*@media (min-width: 1200px)*/
 </style>
