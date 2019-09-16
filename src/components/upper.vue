@@ -2,9 +2,9 @@
   <div>
     <div class="container">
       <header class="header">
-        <img src="../assets/header__bg.png" alt="bg-image is not loaded" class="header__bg-image">
+        <img src="../assets/images/header__bg.png" alt="bg-image is not loaded" class="header__bg-image">
         <div class="header__center">
-          <img src="../assets/text-image.png" alt="text image is not loaded" class="header__text">
+          <img src="../assets/images/text-image.png" alt="text image is not loaded" class="header__text">
         </div>
       </header>
     </div>

@@ -19,7 +19,7 @@
 </script>
 
 <style lang="sass">
-  @import "../norlmalize/norlmalize"
+  @import "../assets/sass/norlmalize"
 
   body
     background-color: #333333
