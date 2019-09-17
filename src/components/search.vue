@@ -6,13 +6,19 @@
           <input autofocus maxlength="70" type="text" class="search__input" placeholder="Search by name">
         </form>
       </div>
+
+      <layout></layout>
     </div>
   </div>
 </template>
 
 <script>
+  import layout from "./layout";
     export default {
-        name: "search"
+        name: "search",
+        components: {
+            layout
+        }
     }
 </script>
 
