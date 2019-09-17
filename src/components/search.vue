@@ -14,7 +14,7 @@
 
 <script>
   import layout from "./layout"
-  import {mapGetters, mapActions} from 'vuex'
+  import { mapActions } from 'vuex'
     export default {
         name: "search",
         methods: {
@@ -22,9 +22,6 @@
         },
         components: {
             layout
-        },
-        computed: {
-            ...mapGetters(['CHARACTERS'])
         },
         async beforeMount() {
           await this.fetchCharacters()

@@ -10,6 +10,7 @@
           </div>
           <div class="wrap__specie">
             species
+<!--            {{ CHARACTERS['next'] }}-->
           </div>
         </div>
       </div>
@@ -17,8 +18,15 @@
 </template>
 
 <script>
+  import {mapGetters} from 'vuex'
     export default {
-        name: "layout"
+        name: "layout",
+        computed: {
+            ...mapGetters(['CHARACTERS'])
+        },
+        beforeMount() {
+            console.log(this.CHARACTERS);
+        }
     }
 </script>
 
