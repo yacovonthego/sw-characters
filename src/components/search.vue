@@ -13,11 +13,21 @@
 </template>
 
 <script>
-  import layout from "./layout";
+  import layout from "./layout"
+  import {mapGetters, mapActions} from 'vuex'
     export default {
         name: "search",
+        methods: {
+            ...mapActions(['fetchCharacters'])
+        },
         components: {
             layout
+        },
+        computed: {
+            ...mapGetters(['CHARACTERS'])
+        },
+        async beforeMount() {
+          await this.fetchCharacters()
         }
     }
 </script>
@@ -25,10 +35,10 @@
 <style scoped lang="sass">
   .search
     width: 100%
+    height: 200px
     display: flex
     justify-content: center
-    padding-top: 100px
-    padding-bottom: 90px
+    align-items: center
     &__form
       width: 70%
       border-bottom: 1px solid #808080
