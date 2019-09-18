@@ -3,10 +3,10 @@
       <div class="wrap">
         <div class="wrap__block">
           <div class="wrap__title">
-            N
+            {{ CHARACTERS[0].name.charAt(0) }}
           </div>
           <div class="wrap__name">
-            name
+            {{ CHARACTERS[0].name }}
           </div>
           <div class="wrap__specie">
             species
@@ -17,8 +17,12 @@
 </template>
 
 <script>
+  import {mapGetters} from 'vuex'
     export default {
         name: "layout",
+        computed: {
+            ...mapGetters(['CHARACTERS'])
+        }
     }
 </script>
 

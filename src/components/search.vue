@@ -20,9 +20,6 @@
         methods: {
             ...mapActions(['fetchCharacters'])
         },
-        computed: {
-            ...mapGetters(['CHARACTERS'])
-        },
         components: {
             layout
         },

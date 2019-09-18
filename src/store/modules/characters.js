@@ -3,7 +3,7 @@ export default {
     async fetchCharacters(ctx) {
       const res = await fetch(
         "https://swapi.co/api/people"
-      );
+      )
       const characters = await res.json();
       ctx.commit('pushCharacters', characters)
     }
@@ -11,6 +11,9 @@ export default {
   mutations: {
     pushCharacters(state, characters) {
       state.characters = characters
+    },
+    concatChar(state, arr) {
+      state.characters.concat(arr)
     }
   },
   state: {
@@ -18,7 +21,9 @@ export default {
   },
   getters: {
     CHARACTERS(state) {
-      return state.characters
+      return state.characters.results
     }
   }
 }
+
+
