@@ -14,17 +14,20 @@
 
 <script>
   import layout from "./layout"
-  import { mapActions } from 'vuex'
+  import { mapActions, mapGetters } from 'vuex'
     export default {
         name: "search",
         methods: {
             ...mapActions(['fetchCharacters'])
         },
+        computed: {
+            ...mapGetters(['CHARACTERS'])
+        },
         components: {
             layout
         },
         async beforeMount() {
-          await this.fetchCharacters()
+            await this.fetchCharacters()
         }
     }
 </script>
