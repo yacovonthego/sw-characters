@@ -4,5 +4,9 @@
     ["env", { "modules": false }],
     "stage-3"
   ],
-  "plugins": ["@babel/plugin-proposal-async-generator-functions"]
+  "plugins": [
+    ["transform-runtime", {
+      "regenerator": true
+    }]
+  ]
 }
