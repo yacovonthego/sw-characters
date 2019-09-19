@@ -4,8 +4,12 @@ export default {
       const res = await fetch(
         "https://swapi.co/api/people"
       )
-      const characters = await res.json();
-      ctx.commit('pushCharacters', characters)
+      if (res.ok) {
+        const characters = await res.json();
+        ctx.commit('pushCharacters', characters);
+        console.log('ok');
+      }
+      else console.log(res.status)
     }
   },
   mutations: {
