@@ -9,6 +9,7 @@
         </div>
         <div class="wrap__specie">
           species
+          {{  }}
         </div>
       </div>
     </div>
@@ -20,8 +21,25 @@
         name: "character",
         data() {
           return {
-              item: this.charItem
+              item: this.charItem,
+              species: []
           }
+        },
+        methods: {
+            async fetchSpecie(uri) {
+                const res = await fetch(uri);
+                if (res.ok) {
+                    const specie = await res.json();
+                    console.log('ok');
+                    return specie
+                }
+                else console.log(res.status);
+            }
+        },
+        async beforeMount() {
+            this.item.species.forEach((item) => {
+                this.species.push()
+            })
         },
         computed: {
             ...mapGetters(['CHARACTERS'])
