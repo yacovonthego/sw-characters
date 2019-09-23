@@ -31,6 +31,7 @@
 </script>
 
 <style scoped lang="sass">
+@import "../assets/sass/colours"
 .wrap
   &__block
     width: 550px
