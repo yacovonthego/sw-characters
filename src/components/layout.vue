@@ -1,7 +1,7 @@
 <template>
     <div>
       <div v-if="CHARACTERS" class="wrap">
-        <character v-for="(char, index) in CHARACTERS" v-bind:char-num="index" :key="char.id"></character>
+        <character v-for="(char, index) in CHARACTERS" :char-item="CHARACTERS[index]" :char-num="index" :key="char.id"></character>
       </div>
     </div>
 </template>

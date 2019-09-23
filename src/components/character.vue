@@ -1,11 +1,11 @@
 <template>
     <div>
       <div class="wrap__block">
-        <div class="wrap__title">
-          {{ CHARACTERS[charId].name.charAt(0) }}
+        <div class="wrap__title" v-bind:class="item.name.charAt(0).toLowerCase()">
+          {{ item.name.charAt(0) }}
         </div>
         <div class="wrap__name">
-          {{ CHARACTERS[charId].name }}
+          {{ item.name }}
         </div>
         <div class="wrap__specie">
           species
@@ -20,13 +20,13 @@
         name: "character",
         data() {
           return {
-              charId: this.charNum
+              item: this.charItem
           }
         },
         computed: {
             ...mapGetters(['CHARACTERS'])
         },
-        props: ['charNum']
+        props: ['charNum', 'charItem']
     }
 </script>
 
@@ -57,7 +57,6 @@
     text-transform: uppercase
     width: 80px
     height: 80px
-    background-color: #bb86fc
     border-radius: 50%
     margin-bottom: 9px
   &__name
